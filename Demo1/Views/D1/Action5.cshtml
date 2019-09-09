@@ -1,0 +1,21 @@
+﻿@using Demo1.Models;
+
+
+@{
+    ViewBag.Title = "Action5";
+
+    //DB fetch simulation 
+    Member m = new Member()
+    {
+        FirstName = "Neha",
+        LastName = " Parekh",
+        MembershipID = 101,
+        MembershipType = "Gold"
+    };
+}
+
+<h2>Action5</h2>
+<p>@ViewBag.Message</p>
+@*<p><b>@m.FirstName @m.LastName</b> <br />@m.MembershipID @m.MembershipType</p>*@
+@Html.Partial("_memberAsSingleLine",m)
+

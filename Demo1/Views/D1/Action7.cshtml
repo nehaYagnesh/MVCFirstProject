@@ -1,0 +1,18 @@
+﻿@using Demo1.Models;
+@model IEnumerable<Member>
+
+@{
+    ViewBag.Title = "Action7";
+}
+
+<h2>Action7</h2>
+
+<p>@ViewBag.Message</p>
+<ul>
+    @foreach (Member m in Model)
+    {
+        @*<li><b>@m.FirstName @m.LastName</b> @m.MembershipID @m.MembershipType</li>*@
+
+    <li>@Html.Partial("_memberAsSingleLine", m)</li> 
+    }
+</ul>

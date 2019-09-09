@@ -1,0 +1,15 @@
+﻿@using Demo1.Models;
+@model Member
+@{
+    ViewBag.Title = "Action6";
+}
+
+<h2>Action6</h2>
+
+@*<p><b>@ViewBag.Message</b></p>
+    <p>
+        <b>@Model.FirstName @Model.LastName</b><br />
+    @Model.MembershipID @Model.MembershipType
+    </p>*@
+
+@Html.Partial("_memberAsSingleLine", Model)

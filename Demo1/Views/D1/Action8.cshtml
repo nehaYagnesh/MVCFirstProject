@@ -1,0 +1,16 @@
+﻿@using Demo1.Models;
+@model ReportEODVM
+@{
+    ViewBag.Title = "Action8";
+}
+
+<h2>Action8</h2>
+<h2>Today's top game : @Model.topGame.Title </h2><br />
+New members joined today :
+<ul>
+    @foreach(Member m in Model.newMembers)
+    {
+     @*<li>@m.FirstName @m.LastName</li>*@
+    <li> @Html.Partial("_memberAsSingleLine", m)</li>
+    }
+</ul>
